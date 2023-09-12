@@ -1,0 +1,780 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffdd;
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+/* navbar */
+
+.masthead {
+  padding-top: 10.5rem;
+  text-align: center;
+  color: #000000;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+  height: 750px;
+}
+
+#mainNav {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: #ffffdd;
+}
+
+#mainNav {
+  background-color: transparent;
+}
+
+#mainNav .navbar-toggler {
+  padding: 0.75rem;
+  font-size: 0.75rem;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+#mainNav .navbar-brand {
+  color: #000000;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.0625em;
+  text-transform: uppercase;
+  font-size: 30px;
+}
+
+#mainNav .navbar-brand img {
+  height: 1.5rem;
+}
+
+#mainNav .navbar-nav .nav-item .nav-link {
+  font-family: 'Amaranth', sans-serif;
+  font-size: 0.95rem;
+  color: gray;
+  letter-spacing: 0.0625em;
+}
+
+#mainNav .navbar-nav .nav-item .nav-link.active,
+#mainNav .navbar-nav .nav-item .nav-link:hover {
+  color: #ffc800;
+}
+
+.svg-container {
+  position: absolute;
+}
+
+.biru {
+  z-index: -1;
+}
+
+.hijau {
+  z-index: -1;
+  left: 1170px;
+}
+
+.welcome {
+  margin-top: 150px;
+  font-family: 'Rock Salt', cursive;
+  font-size: 35px;
+  margin-left: 0px;
+  text-align: center;
+  line-height: 80px;
+}
+
+/* hamburger menu */
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  height: 20px;
+  background-color: transparent;
+  justify-content: space-between;
+  position: relative;
+}
+
+.menu-toggle input {
+  position: absolute;
+  width: 40px;
+  height: 28px;
+  opacity: 0;
+  left: -5px;
+  top: -3px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: black;
+  border-radius: 3px;
+  transition: all 0.5s;
+}
+
+/* hamburger menu animation*/
+
+.menu-toggle span:nth-child(2) {
+  transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4) {
+  transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked~span:nth-child(2) {
+  background-color: white;
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle input:checked~span:nth-child(4) {
+  background-color: white;
+  transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.menu-toggle input:checked~span:nth-child(3) {
+  opacity: 0;
+  transform: scale(0);
+}
+
+#naskun {
+  top: 60px;
+  left: 1000px;
+}
+
+#naskun img {
+  height: 500px;
+}
+
+#nasgor {
+  top: 300px;
+  left: 800px;
+}
+
+#nasgor img {
+  height: 500px;
+}
+
+#geprek {
+  display: inline;
+  top: 300px;
+  left: 1080px;
+}
+
+#geprek img {
+  height: 500px;
+}
+
+/* Menu rekomendasi */
+
+section .menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  min-width: 100vh;
+  background-color: #ffffdd;
+  flex-direction: column;
+}
+
+h1.makanan {
+  text-transform: capitalize;
+  color: #016A70;
+  font-family: 'Satisfy', cursive;
+  font-size: 75px;
+  font-weight: 400;
+  line-height: 108px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.Menu-Page {
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+.Menu-Page .box {
+  position: relative;
+  height: 350px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: white;
+  text-align: center;
+  transition: 0.5s;
+}
+
+.box:hover {
+  transform: scale(1.1);
+  z-index: 1;
+}
+
+.Menu-Page .box .image {
+  width: 100%;
+  height: 60%;
+  background-size: auto;
+}
+
+.Menu-Page .box .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.Menu-Page .box h1 {
+  font-family: 'Righteous', cursive;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.Menu-Page .box p {
+  font-family: 'Righteous', cursive;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.Menu-Page .btn {
+  width: 80%;
+}
+
+.menu {
+  margin-top: 200px;
+}
+
+.Menu {
+  color: #016A70;
+  text-align: center;
+  font-family: Satisfy;
+  font-size: 75px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal
+}
+
+.about-biru {
+  z-index: 1;
+  left: -100px;
+  top: 15px;
+}
+
+.about-kuning {
+  z-index: 1;
+  left: 1080px;
+  top: 300px;
+}
+
+.contact-hijau {
+  z-index: 1;
+  top: 800px;
+}
+
+/* About */
+.tentang {
+  color: #016A70;
+  text-align: center;
+  font-family: Satisfy;
+  font-size: 75px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.about {
+  background-color: #a2c579;
+}
+
+.about-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 65px auto;
+}
+
+.about-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 65px auto;
+}
+
+.kantin-content {
+  flex: 1;
+  width: 300px;
+  margin: 0px 30px;
+  z-index: 2;
+}
+
+.kantin-content h2 {
+  color: #FFF;
+  font-family: Amaranth;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.kantin-content p {
+  color: #FFF;
+  font-family: Amaranth;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 100;
+  line-height: normal;
+  text-indent: 30px;
+  text-align: justify;
+}
+
+.img {
+  flex: 1;
+  margin: auto;
+  z-index: 2;
+}
+
+.img img {
+  width: 100%;
+  height: auto;
+
+}
+
+/* section contact */
+
+section#contact {
+  background-color: #a2c579;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 20px;
+  z-index: -2;
+  height: 100%;
+  width: 100%;
+}
+
+.contact .section-heading {
+  color: #fff;
+}
+
+.contact form#contactForm .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.contact form#contactForm .form-group input,
+.contact form#contactForm .form-group textarea {
+  padding: 1.25rem;
+}
+
+.contact form#contactForm .form-group input.form-control {
+  height: auto;
+}
+
+.contact form#contactForm .form-group-textarea {
+  height: 100%;
+  z-index: 9999;
+}
+
+.contact form#contactForm .form-group-textarea textarea {
+  height: 100%;
+  min-height: 10rem;
+}
+
+.contact form#contactForm p.help-block {
+  margin: 0;
+}
+
+.contact form#contactForm .form-control:focus {
+  border-color: #ffc800;
+  box-shadow: none;
+}
+
+.contact form#contactForm ::-webkit-input-placeholder {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 700;
+  color: #ced4da;
+}
+
+.contact form#contactForm :-moz-placeholder {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 700;
+  color: #ced4da;
+}
+
+.contact form#contactForm ::-moz-placeholder {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 700;
+  color: #ced4da;
+}
+
+.contact form#contactForm :-ms-input-placeholder {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 700;
+  color: #ced4da;
+}
+
+/* footer */
+
+.footer {
+  height: 100%;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin: 10px auto;
+}
+
+.sosmed {
+  flex: 1;
+  width: 100%;
+  margin: auto;
+}
+
+.sosmed ul li a {
+  color: #000;
+  text-align: center;
+  font-family: Amaranth;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+}
+
+.sosmed ul {
+  text-align: start;
+  margin-top: 20px;
+}
+
+.sosmed ul li a:hover {
+  color: #380170;
+}
+
+.copyright p {
+  color: rgba(0, 0, 0, 0.50);
+  text-align: center;
+  font-family: Amaranth;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 20px;
+}
+
+.copyright {
+  flex: 1;
+  width: 100%;
+  margin: 0px 30px;
+}
+
+
+.footer ul li {
+  list-style: none;
+}
+
+
+.button {
+  margin-bottom: 50px;
+  padding: 25px;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* @media screen and (min-width: 390px){
+  #naskun {
+    left: 260px;
+    top: 250px;
+  }
+
+  #naskun img {
+    width: 200px;
+    height: 200px;
+  }
+
+  #nasgor {
+    top: 350px;
+    left: 190px;
+    z-index: 3;
+  }
+
+  #nasgor img {
+    width: 200px;
+    height: 200px;
+  }
+
+  #geprek {
+    top: 340px;
+    left: 300px;
+  }
+
+  #geprek img {
+    width: 200px;
+    height: 200px;
+  }
+} */
+
+@media screen and (max-width: 576px) {
+
+  body {
+    overflow-x: none;
+  }
+
+  .menu-toggle {
+    display: flex;
+    position: relative;
+    margin-left: 88%;
+    z-index: 9999;
+  }
+
+  nav ul {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 60vh;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;
+    z-index: -1;
+    transform: translatey(-100%);
+    transition: all 1s;
+    opacity: 0;
+  }
+
+  nav ul.slide {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  #mainNav .navbar-brand {
+    margin-left: 30px;
+    font-size: 25px;
+  }
+
+  .welcome {
+    font-size: 30px;
+    margin-left: 30px;
+    line-height:20px;
+    margin-top: 150px;
+  }
+
+  .Menu-Page .box {
+    position: relative;
+    height: 450px;
+    width: 300px;
+    margin: auto;
+  }
+
+  .kantin-content p {
+    font-weight: 100;
+    font-size: 19px;
+    letter-spacing: -1px;
+  }
+
+  .footer-container {
+    width: 100%;
+  }
+
+  .sosmed ul li a {
+    font-size: 12px;
+  }
+
+  .copyright p {
+    font-size: 13px;
+  }
+
+  .biru {
+    z-index: -1;
+    width: 350px;
+    top: -189px;
+  }
+
+  .contact-hijau {
+    top: 1300px;
+  }  
+}
+
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+    margin-left: 88%;
+    margin-top: -10px;
+  }
+
+  nav ul {
+    width: 50%;
+  }
+
+  nav ul {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 60vh;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;
+    z-index: -1;
+    transform: translatey(-100%);
+    transition: all 1s;
+    opacity: 0;
+  }
+
+  nav ul.slide {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  #naskun {
+    left: 50%;
+    top: 37%;
+  }
+
+  #naskun img {
+    max-width: 80%;
+    height: 80%;
+  }
+
+  #nasgor {
+    top: 53%;
+    left: 30%;
+    z-index: 3;
+  }
+
+  #nasgor img {
+    max-width: 50%;
+    height: 50%;
+  }
+
+  #geprek {
+    top: 53%;
+    left: 65%;
+  }
+
+  #geprek img {
+    max-width: 100%;
+    height: 100%;
+  }
+  .welcome{
+    line-height: 45px;
+  }
+  .biru {
+    width: 390px;
+    top: -70px; 
+    left: -10px;
+  }
+
+  .hijau {
+    width: 260px;
+    left: 500px;
+    top: -100px;
+    right: 0;
+  }
+
+  .about {
+    margin: 0px;
+  }
+
+  .about-1 {
+    width: 100%;
+    flex-direction: column;
+    padding: 0px 40px;
+  }
+
+  .about-2 {
+    width: 100%;
+    flex-direction: column;
+    padding: 0px 40px;
+  }
+
+  .kantin-content {
+    width: 90%;
+    max-width: 35px 0px;
+    order: 2;
+  }
+
+  .kantin-content h2 {
+    font-size: 28px;
+    margin-top: 30px;
+  }
+
+  .kantin-content p {
+    font-size: 20px;
+    margin-bottom: 25px;
+    text-align: justify;
+  }
+
+  .img {
+    width: 90%;
+    order: 1;
+    margin-top: 50px;
+  }
+
+  .footer-container {
+    width: 100%;
+  }
+
+  .sosmed ul li a {
+    font-size: 12px;
+  }
+
+  .copyright p {
+    font-size: 15px;
+  }
+}
+
+ @media screen and (max-width: 992px){
+ 
+  .menu-toggle {
+    display: flex;
+    margin-left: 88%;
+    margin-top: -10px;
+  }
+
+  nav ul {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 80vh;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;
+    z-index: -1;
+    transform: translatey(-100%);
+    transition: all 1s;
+    opacity: 0;
+  }
+
+  nav ul.slide {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .welcome {
+    margin-left: 30px;
+  }
+
+  .navbar-brand {
+    margin-left: 50px;
+  }
+} 
