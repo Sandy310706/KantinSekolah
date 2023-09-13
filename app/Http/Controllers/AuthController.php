@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use session;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 
-class LoginController extends Controller
+class AuthController extends Controller
 {
    public function login()
    {
@@ -26,7 +27,7 @@ class LoginController extends Controller
             'email.email' => 'Wajib Di Isi',
             'password'  => 'Bingal Si ajg ni',
         ]);
-        if(auth($credentials)){
+        if(Auth::attempt($credentials)){
             if(Auth::user()->role == 'guest'){
                 $request->session()->regenerate();
                 return redirect('');
@@ -44,7 +45,7 @@ class LoginController extends Controller
 
    public function register()
    {
-        return view('auth.buatakun');
+        return view('buatakun');
    }
 
    public function pembuatan(Request $request)
@@ -74,4 +75,3 @@ class LoginController extends Controller
    }
 
 }
-    //
