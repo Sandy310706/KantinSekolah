@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use session;
+
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
@@ -51,9 +53,9 @@ class AuthController extends Controller
    public function pembuatan(Request $request)
    {
         $validasiData = $request->validate([
-            'nama' => ['nama', 'max:100'],
-            'email' => ['email', 'unique:dns', 'unique:user'],
-            'password' => ['password', 'min:7', 'max:25'],
+            'nama' => ['required', 'max:100'],
+            'email' => ['required', 'unique:dns', 'unique:user'],
+            'password' => ['required', 'min:7', 'max:25'],
         ],[
             'nama.required' => ['nama wajib di isi'],
             'email.required' => ['email wajib di isi'],
